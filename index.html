@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <form class="form" action="">
+      <h1>Contact Us</h1>
+
+      <div class="form-section form-flex">
+        <div class="form-section-half">
+          <label class="required" for="firstName">First Name</label>
+          <input class="field-style field-height" id="firstName" type="text" />
+          <p id="firstNameInvalid" class="notification notification-valid">This field is required</p>
+        </div>
+
+        <div class="form-section-half">
+          <label class="required" for="lastName">Last Name</label>
+          <input class="field-style field-height" id="lastName" type="text" />
+          <p id="lastNameInvalid" class="notification notification-valid">This field is required</p>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="required" for="email">Email Address</label>
+        <input class="field-style field-height" id="email" type="email" />
+        <p id="invalidEmail" class="notification notification-valid">Please enter a valid email address</p>
+      </div>
+      
+
+      <div class="form-section">
+
+        <legend class="radio-legend required">Query Type</legend>
+        <fieldset class="radio-fieldset form-flex ">
+
+          <div class="field-style field-height radio-option">
+              <div class="radio-option-both">
+                <input
+                  class="radio-input"
+                  id="generalInquiry"
+                  type="radio"
+                  name="queryType"
+                  value="generalInquiry"
+                />
+                <svg class="radio-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 21"><path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"/></svg>
+              </div>
+
+              <label class="radio-label" for="generalInquiry"
+                >General Enquiry</label
+              >
+            </div>
+
+          <div class="field-style field-height radio-option">
+            <div>
+              <input
+                class="radio-input"
+                id="supportRequest"
+                type="radio"
+                name="queryType"
+                value="supportRequest"
+              />
+              <svg class="radio-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 21"><path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z"/></svg>
+            </div>
+            <label class="radio-label" for="supportRequest">Support Request</label>
+          </div>
+
+          
+        </fieldset>
+
+        <p id="queryInValid" class="notification notification-valid">Please select a query type</p>
+      </div>
+
+      <div class="form-section">
+        <label class="required" for="message">Message</label>
+        <textarea class="field-style textarea" name="message" id="message"></textarea>
+        <p id="messageEmpty" class="notification notification-valid">This field is required</p>
+      </div>
+
+      <div class="form-section checkbox-flex">
+        <div class="checkbox-container">
+          <input class="checkbox-input" id="consent" type="checkbox" />
+          <svg class="checkbox-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 18 18"><path fill="#0C7D69" d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z"/></svg>
+        </div>
+        <label class="checkbox-label checkbox-label-noconcent required" for="consent">I hereby consent to being contacted by the team</label>
+        <label class="checkbox-label checkbox-label-concent required" for="consent">I consent to being contacted by the team</label>
+      </div>
+
+      <p id="consentContact" class="notification notification-valid">To submit this form, please consent to being contacted</p>
+
+      <button id="btn" class="btn">Submit</button>
+
+      <div class="thankyou">
+        <img src="/assets/images/icon-success-check.svg" alt="">
+        <span class="thankyou-sent">Message Sent!</span>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
